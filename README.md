@@ -7,7 +7,7 @@ It explicitly models the word co-occurrence patterns in the whole corpus to solv
 
 Simply install by:
 ```
-pip install biterm
+pip install git+https://github.com/ianargyle1/biterm
 ```
 
 Load some short texts and vectorize them via sklearn.
