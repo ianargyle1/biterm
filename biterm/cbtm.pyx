@@ -7,14 +7,14 @@ import cython
 from itertools import chain
 from tqdm import trange
 cdef extern from "stdlib.h":
-    double drand48()
+    double drand48(void)
 
 cdef int sample_mult(np.ndarray[DOUBLE_t, ndim=1] p):
     cdef int K = p.shape[0]
     for i in range(K):
         p[i] += p[i - 1]
 
-    cdef double u = drand48()
+    cdef double u = drand48(void)
     cdef int k = -1
     for _ in range(K):
         k += 1
